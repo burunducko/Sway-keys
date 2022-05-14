@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Sway hot-keys</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="logo">
+                <img src="./img/logo.png" alt="sway logo">
+                <h1>Sway hot-keys</h1>
+            </div>
+            <div class="actions">
+                <h2>Actions</h2>
+                <p><span>Mod + Enter </span>New terminal</p>
+                <p><span>Mod + F </span>Make current window fullscreen</p>
+                <p><span>Mod + Shift + Q </span>Quit program</p>
+                <p><span>Mod + Shift + E </span>Exit Sway</p>
+                <p><span>Mod + Shift + C </span>Reload Sway configuration</p>
+                <p><span>Mod + Shift + Space </span>Move window to scratchpad</p>
+                <p><span>Mod + Space </span>Show scratchpad</p>
+            </div>
+
+<!-- set $mod Mod4
+bindsym $mod+Return exec $term
+bindsym --to-code $mod+Shift+q kill
+bindsym --to-code $mod+d exec $menu
+floating_modifier $mod normal
+bindsym --to-code $mod+Shift+c reload
+bindsym --to-code $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym --to-code $mod+l exec swaylock --daemonize --color 000000 --show-failed-attempts --indicator-caps-lock --show-keyboard-layout
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindsym $mod+1...0 workspace number 1...10
+bindsym $mod+Shift+1...0 move container to workspace number 1...10
+bindsym --to-code $mod+b splith
+bindsym --to-code $mod+v splitv
+bindsym --to-code $mod+s layout stacking
+bindsym --to-code $mod+w layout tabbed
+bindsym --to-code $mod+e layout toggle split
+bindsym --to-code $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym --to-code $mod+a focus parent
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+mode "resize" {
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize" -->
+
+            <div class="screen">
+                <h2>Screen capture</h2>
+                <p><span>Fn + prt sc </span>Make screenshot</p>
+                <p><span>Fn + Shift + prt sc </span>Frame the screenshot</p>
+                <p><span>Shift + prt sc </span>Paste screenshot</p>
+            </div>
+        </div>
+        
+<!-- set $ps1 Print
+set $ps2 Control+Print
+set $ps3 Alt+Print
+set $ps4 Alt+Control+Print
+
+bindsym $ps1 exec grim - | swappy --file - --output-file - | wl-copy
+bindsym $ps2 exec grim -g "$(slurp)" - | swappy --file - --output-file - | wl-copy
+bindsym $ps3 exec grim $(xdg-user-dir PICTURES)/ps_$(date +"%Y%m%d%H%M%S").png
+bindsym $ps4 exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/ps_$(date +"%Y%m%d%H%M%S").png -->
+
+        <div class="column">
+            <div class="workspaces">
+                <h2>Workspaces keys</h2>
+                <p><span>Mod + 0..9 </span>Change current workspace</p>
+                <p><span>Mod + Shift + 0..9 </span>Move current window to designated workspace</p>
+                <p><span>Mod + B </span>Horizontal layout</p>
+                <p><span>Mod + V </span>Vertical layout</p>
+                <p><span>Mod + S </span>Stacking layout</p>
+                <p><span>Mod + E </span>Toggle split layout</p>
+                <p><span>Mod + W </span>Tabbed layout</p>
+                <p><span>Mod + A </span>Focus on parent container</p>
+                <p><span>Mod + Space </span>Swap focus between tiling and floating</p>
+                <p><span>Mod + Shift + Space </span>Toggle floating mode</p>
+                <p><span>Mod + Tab </span>Next workspace</p>
+                <p><span>Mod + Shift + Tab </span>Previous workspace</p>
+                <p><span>Mod + Left/Right/Up/Down </span>Move focus of the window</p>
+                <p><span>Mod + Shift + Left/Right/Up/Down </span>Move the focused window in the workspace</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="sound">
+                <h2>Sound & volume</h2>
+                <p>Standart system keys</p>
+            </div>
+        </div>
+        
+<!-- bindsym          XF86AudioRaiseVolume exec /etc/sway/pavolume.sh up
+bindsym --locked XF86AudioLowerVolume exec /etc/sway/pavolume.sh down
+bindsym          XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@   toggle
+bindsym          XF86AudioMicMute     exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym --locked XF86AudioPlay        exec playerctl play-pause
+bindsym --locked XF86AudioNext        exec playerctl next
+bindsym --locked XF86AudioPrev        exec playerctl previous -->
+
+        <div class="column">
+            <div class="brightness">
+                <h2>Monitor Brightness</h2>
+                <p>Standart system keys</p>
+            </div>
+        </div>
+
+<!-- bindsym XF86MonBrightnessDown exec light -U 2
+bindsym XF86MonBrightnessUp exec light -A 4 -->
+
+        <!-- <div class="column">
+            <div class="">
+                <h2></h2>
+                <p><span> </span></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="">
+                <h2></h2>
+                <p><span> </span></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="">
+                <h2></h2>
+                <p><span> </span></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="">
+                <h2></h2>
+                <p><span> </span></p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="">
+                <h2></h2>
+                <p><span> </span></p>
+            </div>
+        </div> -->
+        <div class="column">
+            <div class="resize">
+                <h2>Resize mode</h2>
+                <p>To resize windows, you must enter resize mode, with the <span>Mod + R </span>keybinding. After you enter resize mode you can resize windows with <span>Left/Right/Up/Down keys, </span>and press <span>enter </span>or <span>escape </span>to return to default mode.</p>
+            </div>
+        </div>
+        
+
+
+         
+ 
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <main>
+            <section class="logo">
+                <div class="container">
+                    <div class="logo__wrap">
+                        <img src="./img/logo.png" alt="sway logo">
+                        <h1>Sway hot-keys</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="action">
+                <div class="container">
+                    <div class="action__wrap">
+
+                    </div>
+                </div>
+            </section>
+            <section></section>
+            <section></section>
+        </main> -->
+    </div>
+</body>
+</html>
