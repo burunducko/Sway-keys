@@ -17,13 +17,13 @@
             </div>
             <div class="actions">
                 <h2>Actions</h2>
-                <p><span>Mod + Enter </span>New terminal</p>
-                <p><span>Mod + F </span>Make current window fullscreen</p>
-                <p><span>Mod + Shift + Q </span>Quit program</p>
-                <p><span>Mod + Shift + E </span>Exit Sway</p>
-                <p><span>Mod + Shift + C </span>Reload Sway configuration</p>
-                <p><span>Mod + Shift + Space </span>Move window to scratchpad</p>
-                <p><span>Mod + Space </span>Show scratchpad</p>
+                <p><span>Super + Enter </span>New terminal</p>
+                <p><span>Super + F </span>Make current window fullscreen</p>
+                <p><span>Super + Shift + Q </span>Quit program</p>
+                <p><span>Super + Shift + E </span>Exit Sway</p>
+                <p><span>Super + Shift + C </span>Reload Sway configuration</p>
+                <p><span>Super + Shift + Space </span>Move window to scratchpad</p>
+                <p><span>Super + Space </span>Show scratchpad</p>
             </div>
 
 <!-- set $mod Mod4
@@ -67,9 +67,10 @@ bindsym $mod+r mode "resize" -->
 
             <div class="screen">
                 <h2>Screen capture</h2>
-                <p><span>Fn + prt sc </span>Make screenshot</p>
-                <p><span>Fn + Shift + prt sc </span>Frame the screenshot</p>
-                <p><span>Shift + prt sc </span>Paste screenshot</p>
+                <p><span>PrintScreen </span>Make full screen screenshot to clipboard</p>
+                <p><span>Ctrl + PrintScreen</span>Make frame screenshot to clipboard</p>
+                <p><span>Alt + PrintScreen</span>Make full screen screenshot to file<</p>
+                <p><span>Alt + Ctrl + PrintScreen</span>Make frame screenshot to file<</p>
             </div>
         </div>
         
@@ -86,20 +87,20 @@ bindsym $ps4 exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/ps_$(date +"%Y%m%d
         <div class="column">
             <div class="workspaces">
                 <h2>Workspaces keys</h2>
-                <p><span>Mod + 0..9 </span>Change current workspace</p>
-                <p><span>Mod + Shift + 0..9 </span>Move current window to designated workspace</p>
-                <p><span>Mod + B </span>Horizontal layout</p>
-                <p><span>Mod + V </span>Vertical layout</p>
-                <p><span>Mod + S </span>Stacking layout</p>
-                <p><span>Mod + E </span>Toggle split layout</p>
-                <p><span>Mod + W </span>Tabbed layout</p>
-                <p><span>Mod + A </span>Focus on parent container</p>
-                <p><span>Mod + Space </span>Swap focus between tiling and floating</p>
-                <p><span>Mod + Shift + Space </span>Toggle floating mode</p>
-                <p><span>Mod + Tab </span>Next workspace</p>
-                <p><span>Mod + Shift + Tab </span>Previous workspace</p>
-                <p><span>Mod + Left/Right/Up/Down </span>Move focus of the window</p>
-                <p><span>Mod + Shift + Left/Right/Up/Down </span>Move the focused window in the workspace</p>
+                <p><span>Super + 0..9 </span>Change current workspace</p>
+                <p><span>Super + Shift + 0..9 </span>Move current window to designated workspace</p>
+                <p><span>Super + B </span>Horizontal layout</p>
+                <p><span>Super + V </span>Vertical layout</p>
+                <p><span>Super + S </span>Stacking layout</p>
+                <p><span>Super + E </span>Toggle split layout</p>
+                <p><span>Super + W </span>Tabbed layout</p>
+                <p><span>Super + A </span>Focus on parent container</p>
+                <p><span>Super + Space </span>Swap focus between tiling and floating</p>
+                <p><span>Super + Shift + Space </span>Toggle floating mode</p>
+                <p><span>Super + Tab </span>Next workspace</p>
+                <p><span>Super + Shift + Tab </span>Previous workspace</p>
+                <p><span>Super + Left/Right/Up/Down </span>Move focus of the window</p>
+                <p><span>Super + Shift + Left/Right/Up/Down </span>Move the focused window in the workspace</p>
             </div>
         </div>
         <div class="column">
@@ -160,7 +161,7 @@ bindsym XF86MonBrightnessUp exec light -A 4 -->
         <div class="column">
             <div class="resize">
                 <h2>Resize mode</h2>
-                <p>To resize windows, you must enter resize mode, with the <span>Mod + R </span>keybinding. After you enter resize mode you can resize windows with <span>Left/Right/Up/Down keys, </span>and press <span>enter </span>or <span>escape </span>to return to default mode.</p>
+                <p>To resize windows, you must enter resize mode, with the <span>Super + R </span>keybinding. After you enter resize mode you can resize windows with <span>Left/Right/Up/Down keys, </span>and press <span>enter </span>or <span>escape </span>to return to default mode.</p>
             </div>
         </div>
         
