@@ -12,25 +12,26 @@
     <div class="container">
         <div class="column">
             <div class="logo">
-                <img src="./img/logo.png" alt="sway logo">
+                <a href="https://swaywm.org/"><img src="./img/logo.png" alt="sway logo"></a>
                 <h1>Sway hot-keys</h1>
             </div>
-            <div class="actions">
-                <h2>Actions</h2>
-                <p><span>Super + Enter </span>New terminal</p>
-                <p><span>Super + F </span>Make current window fullscreen</p>
-                <p><span>Super + Shift + Q </span>Quit program</p>
-                <p><span>Super + Shift + E </span>Exit Sway</p>
-                <p><span>Super + Shift + C </span>Reload Sway configuration</p>
-                <p><span>Super + Shift + Space </span>Move window to scratchpad</p>
-                <p><span>Super + Space </span>Show scratchpad</p>
+            <div class="partition">
+                <div class="actions">
+                    <h2>Actions</h2>
+                    <p><span>Super+ Enter </span>New terminal</p>
+                    <p><span>Super+ F </span>Make current window fullscreen</p>
+                    <p><span>Super+ Shift + Q </span>Quit program</p>
+                    <p><span>Super+ Shift + E </span>Exit Sway</p>
+                    <p><span>Super+ Shift + C </span>Reload Sway configuration</p>
+                    <p><span>Super+ Shift + Space </span>Move window to scratchpad</p>
+                    <p><span>Super+ Space </span>Show scratchpad</p>
+                </div>
             </div>
-
-<!-- set $mod Mod4
+<!-- set $SuperMod4
 bindsym $mod+Return exec $term
 bindsym --to-code $mod+Shift+q kill
 bindsym --to-code $mod+d exec $menu
-floating_modifier $mod normal
+floating_modifier $Supernormal
 bindsym --to-code $mod+Shift+c reload
 bindsym --to-code $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 bindsym --to-code $mod+l exec swaylock --daemonize --color 000000 --show-failed-attempts --indicator-caps-lock --show-keyboard-layout
@@ -64,52 +65,44 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize" -->
-
-            <div class="screen">
-                <h2>Screen capture</h2>
-                <p><span>PrintScreen </span>Make full screen screenshot to clipboard</p>
-                <p><span>Ctrl + PrintScreen</span>Make frame screenshot to clipboard</p>
-                <p><span>Alt + PrintScreen</span>Make full screen screenshot to file<</p>
-                <p><span>Alt + Ctrl + PrintScreen</span>Make frame screenshot to file<</p>
-            </div>
-        </div>
-        
-<!-- set $ps1 Print
-set $ps2 Control+Print
-set $ps3 Alt+Print
-set $ps4 Alt+Control+Print
-
-bindsym $ps1 exec grim - | swappy --file - --output-file - | wl-copy
-bindsym $ps2 exec grim -g "$(slurp)" - | swappy --file - --output-file - | wl-copy
-bindsym $ps3 exec grim $(xdg-user-dir PICTURES)/ps_$(date +"%Y%m%d%H%M%S").png
-bindsym $ps4 exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/ps_$(date +"%Y%m%d%H%M%S").png -->
-
-        <div class="column">
-            <div class="workspaces">
-                <h2>Workspaces keys</h2>
-                <p><span>Super + 0..9 </span>Change current workspace</p>
-                <p><span>Super + Shift + 0..9 </span>Move current window to designated workspace</p>
-                <p><span>Super + B </span>Horizontal layout</p>
-                <p><span>Super + V </span>Vertical layout</p>
-                <p><span>Super + S </span>Stacking layout</p>
-                <p><span>Super + E </span>Toggle split layout</p>
-                <p><span>Super + W </span>Tabbed layout</p>
-                <p><span>Super + A </span>Focus on parent container</p>
-                <p><span>Super + Space </span>Swap focus between tiling and floating</p>
-                <p><span>Super + Shift + Space </span>Toggle floating mode</p>
-                <p><span>Super + Tab </span>Next workspace</p>
-                <p><span>Super + Shift + Tab </span>Previous workspace</p>
-                <p><span>Super + Left/Right/Up/Down </span>Move focus of the window</p>
-                <p><span>Super + Shift + Left/Right/Up/Down </span>Move the focused window in the workspace</p>
+            <div class="partition">
+                <div class="screen">
+                    <h2>Screen capture</h2>
+                    <p><span>PrintScreen </span>Make full screen screenshot to clipboard</p>
+                    <p><span>Ctrl + PrintScreen </span>Make frame screenshot to clipboard</p>
+                    <p><span>Alt + PrintScreen </span>Make full screen screenshot to file</p>
+                    <p><span>Alt + Ctrl + PrintScreen </span>Make frame screenshot to file</p>
+                </div>
             </div>
         </div>
         <div class="column">
-            <div class="sound">
-                <h2>Sound & volume</h2>
-                <p>Standart system keys</p>
+            <div class="partition">
+                <div class="workspaces">
+                    <h2>Workspaces keys</h2>
+                    <p><span>Super+ 0..9 </span>Change current workspace</p>
+                    <p><span>Super+ Shift + 0..9 </span>Move current window to designated workspace</p>
+                    <p><span>Super+ B </span>Horizontal layout</p>
+                    <p><span>Super+ V </span>Vertical layout</p>
+                    <p><span>Super+ S </span>Stacking layout</p>
+                    <p><span>Super+ E </span>Toggle split layout</p>
+                    <p><span>Super+ W </span>Tabbed layout</p>
+                    <p><span>Super+ A </span>Focus on parent container</p>
+                    <p><span>Super+ Space </span>Swap focus between tiling and floating</p>
+                    <p><span>Super+ Shift + Space </span>Toggle floating mode</p>
+                    <p><span>Super+ Tab </span>Next workspace</p>
+                    <p><span>Super+ Shift + Tab </span>Previous workspace</p>
+                    <p><span>Super+ Left/Right/Up/Down </span>Move focus of the window</p>
+                    <p><span>Super+ Shift + Left/Right/Up/Down </span>Move the focused window in the workspace</p>
+                </div>
             </div>
         </div>
-        
+        <div class="column">
+            <div class="partition">
+                <div class="sound-brightness">
+                    <h2>Volume & Monitor Brightness</h2>
+                    <p>Standart system keys</p>
+                </div>
+            </div>
 <!-- bindsym          XF86AudioRaiseVolume exec /etc/sway/pavolume.sh up
 bindsym --locked XF86AudioLowerVolume exec /etc/sway/pavolume.sh down
 bindsym          XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@   toggle
@@ -117,88 +110,29 @@ bindsym          XF86AudioMicMute     exec pactl set-source-mute @DEFAULT_SOURCE
 bindsym --locked XF86AudioPlay        exec playerctl play-pause
 bindsym --locked XF86AudioNext        exec playerctl next
 bindsym --locked XF86AudioPrev        exec playerctl previous -->
-
-        <div class="column">
-            <div class="brightness">
-                <h2>Monitor Brightness</h2>
-                <p>Standart system keys</p>
-            </div>
-        </div>
-
 <!-- bindsym XF86MonBrightnessDown exec light -U 2
 bindsym XF86MonBrightnessUp exec light -A 4 -->
-
-        <!-- <div class="column">
-            <div class="">
-                <h2></h2>
-                <p><span> </span></p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="">
-                <h2></h2>
-                <p><span> </span></p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="">
-                <h2></h2>
-                <p><span> </span></p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="">
-                <h2></h2>
-                <p><span> </span></p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="">
-                <h2></h2>
-                <p><span> </span></p>
-            </div>
-        </div> -->
-        <div class="column">
-            <div class="resize">
-                <h2>Resize mode</h2>
-                <p>To resize windows, you must enter resize mode, with the <span>Super + R </span>keybinding. After you enter resize mode you can resize windows with <span>Left/Right/Up/Down keys, </span>and press <span>enter </span>or <span>escape </span>to return to default mode.</p>
-            </div>
-        </div>
-        
-
-
-         
- 
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <main>
-            <section class="logo">
-                <div class="container">
-                    <div class="logo__wrap">
-                        <img src="./img/logo.png" alt="sway logo">
-                        <h1>Sway hot-keys</h1>
-                    </div>
+            <div class="partition">
+                <div class="language">
+                    <h2>Change language</h2>
+                    <p><span>Super+ space </span>Change current language</p>
                 </div>
-            </section>
-            <section class="action">
-                <div class="container">
-                    <div class="action__wrap">
-
-                    </div>
+            </div>
+            <div class="partition">
+                <div class="resize">
+                    <h2>Resize mode</h2>
+                    <p>To resize windows, you must enter resize mode, with the <span>Super+ R </span>keybinding. After you enter resize mode you can resize windows with <span>Left/Right/Up/Down keys, </span>and press <span>enter </span>or <span>escape </span>to return to default mode.</p>
                 </div>
-            </section>
-            <section></section>
-            <section></section>
-        </main> -->
+            </div>
+        </div>
     </div>
 </body>
 </html>
+
+
+<!-- <div class="column">
+    <div class="">
+        <h2></h2>
+        <p><span> </span></p>
+    </div>
+</div> -->
